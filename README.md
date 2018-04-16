@@ -8,6 +8,8 @@
 
 ## 技术点
 
+内存优化、技巧==>[Android GC机制实践调研)(https://github.com/qqiabc521/blog/issues/4)
+
 Rxjava、技巧==>[RxJava2使用过程中遇到的坑](https://github.com/qqiabc521/blog/issues/3)
 
 
@@ -16,8 +18,8 @@ Rxjava、技巧==>[RxJava2使用过程中遇到的坑](https://github.com/qqiabc
 
 ## 工作总结
 
-开发规范==> [日常开发中，如何给团队留下财富？](https://github.com/qqiabc521/blog/issues/1)
-
 反思==>[一次重大错误的选择的反思](https://github.com/qqiabc521/blog/issues/2)
+
+开发规范==> [日常开发中，如何给团队留下财富？](https://github.com/qqiabc521/blog/issues/1)
 
 
