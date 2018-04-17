@@ -8,6 +8,8 @@
 
 ## 技术点
 
+java、冷知识==>[java 序列化的遗漏点---static、transient](https://github.com/qqiabc521/blog/issues/5)
+
 内存优化、技巧==>[Android GC机制实践调研](https://github.com/qqiabc521/blog/issues/4)
 
 Rxjava、技巧==>[RxJava2使用过程中遇到的坑](https://github.com/qqiabc521/blog/issues/3)
