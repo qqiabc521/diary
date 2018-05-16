@@ -8,6 +8,8 @@
 
 ## 技术点
 
+java、冷知识==>[类比较与对象类型判别---Class.isAssignableFrom与 instanceof 区别](https://github.com/qqiabc521/blog/issues/7)
+
 java、冷知识==>[java 序列化的遗漏点---static、transient](https://github.com/qqiabc521/blog/issues/5)
 
 内存优化、技巧==>[Android GC机制实践调研](https://github.com/qqiabc521/blog/issues/4)
