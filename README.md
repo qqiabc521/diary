@@ -24,7 +24,7 @@ Rxjava、技巧==>[RxJava2使用过程中遇到的坑](https://github.com/qqiabc
 
 生活感悟(2018.04.19)==>[人生的错位](https://github.com/qqiabc521/blog/issues/6)
 
-反思(2018.04.06)==>[一次重大错误的选择的反思](https://github.com/qqiabc521/blog/issues/2)
+反思(2018.04.06)==>[一次重大错误选择的反思](https://github.com/qqiabc521/blog/issues/2)
 
 开发规范(2018.04.06)==> [日常开发中，如何给团队留下财富？](https://github.com/qqiabc521/blog/issues/1)
 
