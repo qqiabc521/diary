@@ -5,6 +5,7 @@
 模型如下图：
 
 ![](https://github.com/qqiabc521/blog/blob/master/resource/1.jpg)
+<img src="https://github.com/qqiabc521/blog/blob/master/resource/1.jpg" width="300" height="300" alt="类加载结构图"/>
 
 双亲委派模型中除了启动类加载器之外其余都需要有自己的父类加载器
 
