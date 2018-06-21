@@ -7,7 +7,7 @@
 
 现在我们再来看看View里的事件分发机制，概括来说，可以用下面代码表示：
 
-```
+```java
 public boolean dispatchTouchEvent(MotionEvent event){
     boolean consume = false;
     //父View决定是否拦截事件
@@ -35,7 +35,7 @@ public boolean dispatchTouchEvent(MotionEvent event){
 
 事件一层层传递到了ViewGroup里，关于ViewGroup对事件的处理，我们下面会说，如果superDispatchTouchEvent()方法返回false，即没有 处理该事件，则会继续调用Activity的onTouchEvent(ev)方法来处理该事件。可见Activity的onTouchEvent(ev)在事件处理的优先级是最低的。
 
-```
+```java
 public class Activity extends ContextThemeWrapper
         implements LayoutInflater.Factory2,
         Window.Callback, KeyEvent.Callback,
@@ -64,7 +64,6 @@ ViewGroup作为View容器，它需要考虑自己的子View是否处理了该事
 View没有子元素，无法向下传递事件，它只能自己处理事件，所以View的事件传递比较简单。
 
 如果外界设置了OnTouchListener且OnTouchListener.onTouch(this, event)返回true，则表示该方法消费了该事件，则onTouchEvent(event)不再被调用。 可见OnTouchListener的优先级高于onTouchEvent(event)，这样是为了便于外界处理事件。
-
 
 
 **关于onTouchEvent(MotionEvent event)，有两点需要说明一下：**
