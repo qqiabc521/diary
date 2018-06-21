@@ -1,6 +1,6 @@
 # Java 运行时的内存划分
 
-<img src="https://github.com/qqiabc521/blog/blob/master/resource/2.jpg" width="300" height="300" alt="运行时内存结构图"/>
+<img src="https://github.com/qqiabc521/blog/blob/master/resource/2.jpeg" width="600" height="450" alt="运行时内存结构图"/>
 
 ## 程序计数器
 
