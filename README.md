@@ -22,9 +22,21 @@
 
 ## JVM
 * [JVM入门](https://github.com/qqiabc521/blog/blob/master/JVM/JVM技术入门.md)
+* [运行时内存划分](https://github.com/qqiabc521/blog/blob/master/JVM/内存分配.md)
+* [垃圾回收](https://github.com/qqiabc521/blog/blob/master/JVM/垃圾回收.md)
 * [类加载机制](https://github.com/qqiabc521/blog/blob/master/JVM/类加载.md)
 * [内存访问重排序](https://github.com/qqiabc521/blog/blob/master/JVM/内存访问重排序.md)
-* [Java 运行时内存划分](https://github.com/qqiabc521/blog/blob/master/JVM/内存分配.md)
+
+
+## Java多线程
+* [多线程中的常见问题](https://github.com/qqiabc521/blog/blob/master/concurrent/多线程常见问题.md)
+* [多线程的三大核心](https://github.com/qqiabc521/blog/blob/master/concurrent/多线程三大核心.md)
+* [synchronize 关键字原理](https://github.com/qqiabc521/blog/blob/master/concurrent/Synchronize实现原理.md)
+* [ReentrantLock 实现原理](https://github.com/qqiabc521/blog/blob/master/concurrent/ReentrantLock实现原理.md)
+* [ConcurrentHashMap 的实现原理](https://github.com/qqiabc521/blog/blob/master/concurrent/ConcurrentHashMap实现原理.md)
+* [线程池原理](https://github.com/qqiabc521/blog/blob/master/concurrent/ThreadPoolExecutor实现原理.md)
+* [理解线程通信](https://github.com/qqiabc521/blog/blob/master/concurrent/理解线程通信.md)
+
 
 
 ## 工作总结
