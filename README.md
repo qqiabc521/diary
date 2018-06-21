@@ -21,8 +21,10 @@
 
 
 ## JVM
-* [类加载机制](https://github.com/qqiabc521/blog/blob/master/JVM/ClassLoad.md)
-* [Java 运行时内存划分](https://github.com/qqiabc521/blog/blob/master/JVM/MemoryAllocation.md)
+* [JVM入门](https://github.com/qqiabc521/blog/blob/master/JVM/JVM技术入门.md)
+* [类加载机制](https://github.com/qqiabc521/blog/blob/master/JVM/类加载.md)
+* [内存访问重排序](https://github.com/qqiabc521/blog/blob/master/JVM/内存访问重排序.md)
+* [Java 运行时内存划分](https://github.com/qqiabc521/blog/blob/master/JVM/内存分配.md)
 
 
 ## 工作总结
