@@ -1,11 +1,11 @@
-1、synchronized
+## synchronized
 把代码块声明为 synchronized，有两个重要后果，通常是指该代码具有 原子性（atomicity）和 可见性（visibility）。
 
-1.1 原子性
+### 1. 原子性
 原子性意味着个时刻，只有一个线程能够执行一段代码，这段代码通过一个monitor object保护。从而防止多个线程在更新共享状态时相互冲突。
 
 
-1.2 可见性
+### 2.可见性
 可见性则更为微妙，它要对付内存缓存和编译器优化的各种反常行为。它必须确保释放锁之前对共享数据做出的更改对于随后获得该锁的另一个线程是可见的 。
 
 作用：如果没有同步机制提供的这种可见性保证，线程看到的共享变量可能是修改前的值或不一致的值，这将引发许多严重问题。
@@ -22,7 +22,7 @@
 ——volatile只保证可见性，不保证原子性！
 
 
-1.3 何时要同步？
+### 3.何时要同步？
 可见性同步的基本规则是在以下情况中必须同步： 
 
 读取上一次可能是由另一个线程写入的变量 
@@ -40,7 +40,7 @@
 线程可以看见它将要处理的对象时
 
 
-1.4 synchronize的限制
+### 4.synchronize的限制
 synchronized是不错，但它并不完美。它有一些功能性的限制：
 
 它无法中断一个正在等候获得锁的线程；
@@ -49,14 +49,14 @@ synchronized是不错，但它并不完美。它有一些功能性的限制：
 多数情况下，这没问题（而且与异常处理交互得很好），但是，确实存在一些非块结构的锁定更合适的情况。
 
 
-2、ReentrantLock
+## ReentrantLock
 java.util.concurrent.lock 中的Lock 框架是锁定的一个抽象，它允许把锁定的实现作为 Java 类，而不是作为语言的特性来实现。
 这就为Lock 的多种实现留下了空间，各种实现可能有不同的调度算法、性能特性或者锁定语义。
 
 ReentrantLock 类实现了Lock ，它拥有与synchronized 相同的并发性和内存语义，但是添加了类似锁投票、定时锁等候和可中断锁等候的一些特性。
 此外，它还提供了在激烈争用情况下更佳的性能。（换句话说，当许多线程都想访问共享资源时，JVM 可以花更少的时候来调度线程，把更多时间用在执行线程上。）
 
-[java] view plain copy
+```java
 class Outputter1 {    
     private Lock lock = new ReentrantLock();// 锁对象    
   
@@ -72,17 +72,19 @@ class Outputter1 {
         }    
     }    
 }    
+```
 
 区别：
 
 需要注意的是，用sychronized修饰的方法或者语句块在代码执行完之后锁自动释放，而是用Lock需要我们手动释放锁，
 所以为了保证锁最终被释放(发生异常情况)，要把互斥区放在try内，释放锁放在finally内！！
 
-3、读写锁ReadWriteLock
+## 读写锁ReadWriteLock
 上例中展示的是和synchronized相同的功能，那Lock的优势在哪里？
 
 例如一个类对其内部共享数据data提供了get()和set()方法，如果用synchronized，则代码如下：
 
+```java
 class syncData {        
     private int data;// 共享数据        
     public synchronized void set(int data) {    
@@ -105,9 +107,11 @@ class syncData {
         System.out.println(Thread.currentThread().getName() + "读取" + this.data);    
     }    
 }    
+```
 
 然后写个测试类来用多个线程分别读写这个共享数据：
 
+```java
 public static void main(String[] args) {    
 //        final Data data = new Data();    
           final syncData data = new syncData();    
@@ -140,6 +144,7 @@ public static void main(String[] args) {
             t.start();  
         }    
     }    
+```
 
 运行结果：
 Thread-W0准备写入数据  
@@ -208,6 +213,7 @@ Thread-W0写入29
 
 我们可以用读写锁ReadWriteLock实现：
 
+```java
 import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
@@ -245,6 +251,8 @@ class Data {
         }    
     }    
 }    
+```
+
 测试结果：
 Thread-W1准备写入数据  
 Thread-W1写入9  
@@ -320,7 +328,7 @@ Thread-R0读取1
 
 
 
-4、线程间通信Condition
+## 线程间通信Condition
 Condition可以替代传统的线程间通信，用await()替换wait()，用signal()替换notify()，用signalAll()替换notifyAll()。
 
 ——为什么方法名不直接叫wait()/notify()/nofityAll()？因为Object的这几个方法是final的，不可重写！
@@ -342,6 +350,7 @@ Condition的强大之处在于它可以为多个线程间建立不同的Conditio
 
 ——其实就是java.util.concurrent.ArrayBlockingQueue的功能
 
+```java
 class BoundedBuffer {  
   final Lock lock = new ReentrantLock();          //锁对象  
   final Condition notFull  = lock.newCondition(); //写线程锁  
@@ -393,7 +402,7 @@ class BoundedBuffer {
       lock.unlock();//解除锁定   
     }   
   }   
-
+```
 
 优点：
 
