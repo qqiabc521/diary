@@ -149,6 +149,7 @@ public final class ObservableCreate<T> extends Observable<T> {
 ObservableCreate是Observable的子类，内部有一个静态内部类CreateEmitter，这个内部类实现了ObservableEmitter接口。
 
 **Observable.create()总结：**
+
 Observable.create()返回一个ObservableCreate对象。我们暂且先知道这一点就可以了。
 
 ## Observable.subscribe()
@@ -193,7 +194,11 @@ public final class ObservableCreate<T> extends Observable<T> {
         }
     }
 ```
- subscribeActual方法内部，首先实例化一个CreateEmitter发射器对象，observer作为构造参数存储在CreateEmitter中。然后执行Observer的onSubscribe回调。最后执行ObservableOnSubscribe对象的subscribe方法，将CreateEmitter发射器发送数据，即：
+ subscribeActual方法内部，首先实例化一个CreateEmitter发射器对象，observer作为构造参数存储在CreateEmitter中。
+ 
+然后执行Observer的onSubscribe回调。
+
+最后执行ObservableOnSubscribe对象的subscribe方法，将CreateEmitter发射器发送数据，即：
  
  ```java
   public void subscribe(ObservableEmitter<String> e) throws Exception {
@@ -203,7 +208,7 @@ public final class ObservableCreate<T> extends Observable<T> {
             }
  ```
 
-###总结
+### 总结
 我们先分析各个类的职责：
 
 * Observable:业务主线，所有的操作都是基于其子类实现。可以理解为装饰器模式下的基类。
