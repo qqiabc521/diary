@@ -19,7 +19,7 @@
 * [java 序列化的遗漏点---static、transient](https://github.com/qqiabc521/blog/issues/5)
 
 ## RXJAVA
-* [JVM入门](https://github.com/qqiabc521/blog/blob/master/rxjava/rxjava基本流程解析.md)
+* [rxjava基本流程解析](https://github.com/qqiabc521/blog/blob/master/rxjava/rxjava基本流程解析.md)
 
 
 ## JVM
