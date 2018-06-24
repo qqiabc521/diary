@@ -41,6 +41,9 @@ Observable.create(new ObservableOnSubscribe<String>() {
 ```java
  public static <T> Observable<T> create(ObservableOnSubscribe <T> source) {
         ObjectHelper.requireNonNull(source, "source is null");
+        //RxJavaPlugins提供了一系列的Hook function，
+        //通过钩子函数这种方法对RxJava的标准操作进行加工，
+        //当我们没有进行配置时，默认是直接返回原来的对象，也就是返回ObservableCreate对象
         return RxJavaPlugins.onAssembly(new ObservableCreate<T>(source));
     }
 ```
