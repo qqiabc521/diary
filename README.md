@@ -1,7 +1,7 @@
 # blog
-日常工作总结与体会，记录点滴
 
-**我们每个人一生大概会作出上百万次选择，最终的结构累加构成了我们的人生。------每一次的选择都是人生的一个分支，走向不同的人生经历。故选择需慎重**
+
+**我们每个人一生大概会作出上百万次选择，最终的结构累加构成了我们的人生。每一次的选择都是人生的一个分支，走向不同的人生经历。**
 
 
 
@@ -18,6 +18,8 @@
 
 * [java 序列化的遗漏点---static、transient](https://github.com/qqiabc521/blog/issues/5)
 
+## RXJAVA
+* [rxjava基本流程解析](https://github.com/qqiabc521/blog/blob/master/rxjava/rxjava基本流程解析.md)
 
 
 ## JVM
