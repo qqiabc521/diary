@@ -183,19 +183,22 @@ MapObserver对象在执行onNext的时候，先执行funtion函数进行数据�
 ## 创建
 在未执行subscribe订阅之前，执行的流程应该是这样的：
 
-
+![来源网络](https://github.com/qqiabc521/blog/blob/master/resource/3.png)
 
 ## 订阅
+![来源网络](https://github.com/qqiabc521/blog/blob/master/resource/4.png)
 
-Observable中存储的上游的Observable 会被下游的Observer订阅。
-每一步都会生成对应的Observer对上一步生成并存储的Observable进行订阅。
+* Observable中存储的上游的Observable 会被下游的Observer订阅。
+* 每一步都会生成对应的Observer对上一步生成并存储的Observable进行订阅。
+
 在订阅时，实际上这个顺序是逆向的，从下游往上游进行订阅（Observable的装饰器模式）。
 
 ## 上游发射数据源
+![来源网络](https://github.com/qqiabc521/blog/blob/master/resource/5.png)
 
 和订阅不同，数据的传递和变换则是正常，方向从上游往下游进行依次处理，最终执行我们subscribe中传递的Observer.onNext()。
 
-总结
+**总结**
 
 1. 创建：订阅前，每一步都生成对应的Observable对象，中间的每一步都将上游的Observable存储；
 2. 订阅： 每一步都会生成对应的Observer对上一步生成并存储的Observable进行订阅。**订阅的执行顺序是由下到上的**。
