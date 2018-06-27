@@ -5,21 +5,9 @@
 
 
 
-## Android 小技巧
-
-
-* [Android GC机制实践调研](https://github.com/qqiabc521/blog/issues/4)
-
-* [RxJava2使用过程中遇到的坑](https://github.com/qqiabc521/blog/issues/3)
-
-
-## 冷知识
-* [类比较与对象类型判别---Class.isAssignableFrom与 instanceof 区别](https://github.com/qqiabc521/blog/issues/7)
-
-* [java 序列化的遗漏点---static、transient](https://github.com/qqiabc521/blog/issues/5)
-
 ## RXJAVA
 * [rxjava基本流程解析](https://github.com/qqiabc521/blog/blob/master/rxjava/rxjava基本流程解析.md)
+* [rxjava操作符流程原理解析](https://github.com/qqiabc521/blog/blob/master/rxjava/rrxjava操作符流程原理解析.md)
 
 
 ## JVM
@@ -40,7 +28,14 @@
 * [理解线程通信](https://github.com/qqiabc521/blog/blob/master/concurrent/理解线程通信.md)
 * [锁机制：synchronized、Lock、Condition](https://github.com/qqiabc521/blog/blob/master/concurrent/锁机制：synchronized、Lock、Condition.md)
 
+## Android 小技巧
+* [Android GC机制实践调研](https://github.com/qqiabc521/blog/issues/4)
+* [RxJava2使用过程中遇到的坑](https://github.com/qqiabc521/blog/issues/3)
 
+
+## 冷知识
+* [类比较与对象类型判别---Class.isAssignableFrom与 instanceof 区别](https://github.com/qqiabc521/blog/issues/7)
+* [java 序列化的遗漏点---static、transient](https://github.com/qqiabc521/blog/issues/5)
 
 ## 工作总结
 
