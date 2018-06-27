@@ -1,3 +1,4 @@
+# 实例分析
 本文将会对我们使用频率最高的map操作符进行分析，在了解本文内容之前，建议先看一下[rxjava基本流程解析]
 
 ```java
@@ -171,3 +172,31 @@ public interface Function<T, R> {
 }
 ```
 其作用就是把上游的数据进行变换，因此我们看到，在源码中，这个Function函数也被当做成员进行了存储，在订阅的时候通过ObservableMap.subscribeActual()作为参数传入。
+
+## MapObserver
+MapObserver对象在执行onNext的时候，先执行funtion函数进行数据变换，将转换后的数据，传给下游传入的Observer，执行下游Observer的onNext方法。
+
+> 在数据进行了转换之后，会将转换后的数据进行一次ObjectHelper.requireNonNull()非空校验，如果转换后的数据为空，则会抛出错误，这一点我们一定要注意，数据流的传递和转换过程中，一定要避免null值的情况。
+
+
+# 归纳总结
+## 创建
+在未执行subscribe订阅之前，执行的流程应该是这样的：
+
+
+
+## 订阅
+
+Observable中存储的上游的Observable 会被下游的Observer订阅。
+每一步都会生成对应的Observer对上一步生成并存储的Observable进行订阅。
+在订阅时，实际上这个顺序是逆向的，从下游往上游进行订阅（Observable的装饰器模式）。
+
+## 上游发射数据源
+
+和订阅不同，数据的传递和变换则是正常，方向从上游往下游进行依次处理，最终执行我们subscribe中传递的Observer.onNext()。
+
+总结
+
+1. 创建：订阅前，每一步都生成对应的Observable对象，中间的每一步都将上游的Observable存储；
+2. 订阅： 每一步都会生成对应的Observer对上一步生成并存储的Observable进行订阅。**订阅的执行顺序是由下到上的**。
+3. 执行：先执行每一步传入的函数操作，然后将操作后的数据交给下游的Observer继续处理。 **数据的传递和处理顺序是由上到下的**。
