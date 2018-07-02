@@ -2,7 +2,6 @@
 
 ```java
 Observable.create(new ObservableOnSubscribe<String>() {
-
             @Override
             public void subscribe(ObservableEmitter<String> e) throws Exception {
                 e.onNext("1");
@@ -12,7 +11,7 @@ Observable.create(new ObservableOnSubscribe<String>() {
         }).subscribe(new Observer<String>() {
             @Override
             public void onSubscribe(Disposable d) {
-                System.out.println("onSubscribe "+d.toString());
+                System.out.println("onSubscribe");
             }
 
             @Override
@@ -22,7 +21,7 @@ Observable.create(new ObservableOnSubscribe<String>() {
 
             @Override
             public void onError(Throwable e) {
-                System.out.println("onError");
+                System.out.println("onError "+e.getMessage());
             }
 
             @Override
@@ -31,6 +30,17 @@ Observable.create(new ObservableOnSubscribe<String>() {
             }
         });
 ```
+
+运行结果：
+
+> onSubscribe
+
+> onNext 1
+
+> onNext 2
+
+> onComplete
+
 这个demo有两步操作：
 
 > * Observable.create();
