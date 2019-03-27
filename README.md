@@ -52,4 +52,7 @@
 
 * 开发规范(2018.04.06)==> [日常开发中，如何给团队留下财富？](https://github.com/qqiabc521/blog/issues/1)
 
+## 外部资源
+* [一些经典且高质量的电子书分享](https://github.com/threerocks/studyFiles)
+
 
