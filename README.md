@@ -3,6 +3,10 @@
 
 **我们每个人一生大概会作出上百万次选择，最终的结构累加构成了我们的人生。每一次的选择都是人生的一个分支，走向不同的人生经历。**
 
+## Web性能权威指南笔记
+* [一、针对TCP的优化建议](https://github.com/qqiabc521/blog/blob/master/Web性能权威指南/一、针对TCP的优化建议.md)
+* [二、UDP的构成](https://github.com/qqiabc521/blog/blob/master/Web性能权威指南/二、UDP的构成.md)
+* [三、传输层安全（TLS）](https://github.com/qqiabc521/blog/blob/master/Web性能权威指南/三、传输层安全（TLS）.md)
 
 
 ## RXJAVA
