@@ -27,6 +27,8 @@
 * [线程池原理](https://github.com/qqiabc521/blog/blob/master/concurrent/ThreadPoolExecutor实现原理.md)
 * [理解线程通信](https://github.com/qqiabc521/blog/blob/master/concurrent/理解线程通信.md)
 * [锁机制：synchronized、Lock、Condition](https://github.com/qqiabc521/blog/blob/master/concurrent/锁机制：synchronized、Lock、Condition.md)
+* [CountDownLatch用法](https://github.com/qqiabc521/blog/blob/master/concurrent/CountDownLatch用法.md)
+
 
 ## Android 小技巧
 * [Android GC机制实践调研](https://github.com/qqiabc521/blog/issues/4)
@@ -36,6 +38,11 @@
 ## 冷知识
 * [类比较与对象类型判别---Class.isAssignableFrom与 instanceof 区别](https://github.com/qqiabc521/blog/issues/7)
 * [java 序列化的遗漏点---static、transient](https://github.com/qqiabc521/blog/issues/5)
+
+## 架构
+* [架构设计](https://github.com/qqiabc521/blog/blob/master/architecture/架构设计.md)
+
+
 
 ## 工作总结
 
