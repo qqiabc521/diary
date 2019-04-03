@@ -7,6 +7,12 @@
 * [一、针对TCP的优化建议](https://github.com/qqiabc521/blog/blob/master/Web性能权威指南/一、针对TCP的优化建议.md)
 * [二、UDP的构成](https://github.com/qqiabc521/blog/blob/master/Web性能权威指南/二、UDP的构成.md)
 * [三、传输层安全（TLS）](https://github.com/qqiabc521/blog/blob/master/Web性能权威指南/三、传输层安全（TLS）.md)
+* [四、移动网络的优化建议](https://github.com/qqiabc521/blog/blob/master/Web性能权威指南/四、移动网络的优化建议.md)
+* [五、针对浏览器的优化建议](https://github.com/qqiabc521/blog/blob/master/Web性能权威指南/五、针对浏览器的优化建议.md)
+* [六、Http1.x](https://github.com/qqiabc521/blog/blob/master/Web性能权威指南/六、Http1.x.md)
+* [七、Http2](https://github.com/qqiabc521/blog/blob/master/Web性能权威指南/七、Http2.md)
+* [八、应用经典的性能优化](https://github.com/qqiabc521/blog/blob/master/Web性能权威指南/八、应用经典的性能优化.md)
+
 
 
 ## RXJAVA
@@ -44,7 +50,7 @@
 * [java 序列化的遗漏点---static、transient](https://github.com/qqiabc521/blog/issues/5)
 
 ## 架构
-* [架构设计](https://github.com/qqiabc521/blog/blob/master/architecture/架构设计.md)
+* [干净的架构 The Clean Architecture](https://www.jianshu.com/p/248ac7ad48a2)
 
 
 
